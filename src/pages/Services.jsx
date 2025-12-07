@@ -3,22 +3,22 @@ import { Link } from 'react-router-dom';
 const Services = () => {
     const services = [
         {
-            title: 'Bridal Makeup',
-            price: 'Starting at $250',
+            title: 'Bridal / Groom Makeup',
+            price: 'Starting at ₹999',
             description: 'Includes consultation, trial run, and wedding day application. Lashes included.',
-            features: ['90-minute trial', 'Premium skin prep', 'Long-wear application', 'Touch-up kit'],
+            features: ['60-minute application', 'Premium skin prep', 'Long-wear application', 'Touch-up kit'],
         },
         {
             title: 'Special Event',
-            price: '$150',
+            price: 'Starting at ₹499',
             description: 'Perfect for proms, galas, photoshoots, or any special occasion where you want to look your best.',
-            features: ['60-minute application', 'Lashes included', 'Customized look', 'Setting spray'],
+            features: ['30-minute application', 'Lashes included', 'Customized look', 'Setting spray'],
         },
         {
-            title: 'Makeup Lesson',
-            price: '$200',
-            description: 'A 2-hour one-on-one session to learn techniques tailored to your features and lifestyle.',
-            features: ['Product review', 'Step-by-step guidance', 'Face chart', 'Product recommendations'],
+            title: 'Baby Shower Makeup',
+            price: 'Starting at ₹499',
+            description: 'Celebrate this special moment with a soft, radiant look that captures your natural glow. Perfect for the mom-to-be!',
+            features: ['30-minute application', 'Premium skin prep', 'Long-wear application', 'Touch-up kit'],
         },
     ];
 

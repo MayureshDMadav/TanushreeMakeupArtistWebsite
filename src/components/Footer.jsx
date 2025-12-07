@@ -9,7 +9,7 @@ const Footer = () => {
 
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left relative z-10">
                 <div>
-                    <h3 className="text-3xl font-display font-bold mb-4 text-primary drop-shadow-sm">ELENA ROSSI</h3>
+                    <h3 className="text-3xl font-display font-bold mb-4 text-primary drop-shadow-sm">Tanushree</h3>
                     <p className="text-dark font-body font-medium text-sm leading-relaxed">
                         Professional makeup artist specializing in bridal, editorial, and special events. ✨
                     </p>
@@ -48,7 +48,7 @@ const Footer = () => {
             </div>
             <div className="container mx-auto px-6 mt-12 pt-8 border-t-2 border-black text-center relative z-10">
                 <p className="text-sm font-body font-bold text-dark">
-                    &copy; {new Date().getFullYear()} Elena Rossi Makeup. Made with 💖
+                    &copy; {new Date().getFullYear()} Tanushree Makeover. Made with 💖
                 </p>
             </div>
         </footer>

@@ -21,10 +21,10 @@ const Intro = () => {
                     </div>
                     <div className="w-full md:w-1/2">
                         <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-primary drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">
-                            Meet Elena 👋
+                            Meet Tanushree 👋
                         </h2>
                         <p className="text-dark font-body font-medium text-lg mb-6 leading-relaxed bg-secondary p-4 rounded-2xl border-2 border-black">
-                            With over 10 years of experience in the beauty industry, I specialize in creating timeless, elegant looks that highlight your unique features. My philosophy is simple: makeup should empower you, not mask you. ✨
+                            With many years of experience in the beauty industry, I specialize in creating timeless, elegant looks that highlight your unique features. My philosophy is simple: makeup should empower you, not mask you. ✨
                         </p>
                         <p className="text-dark font-body text-lg mb-8 leading-relaxed">
                             Whether it's your wedding day or a high-fashion editorial shoot, I bring passion, precision, and a calming presence to every appointment.

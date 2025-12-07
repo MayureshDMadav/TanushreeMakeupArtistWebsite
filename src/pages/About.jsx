@@ -10,7 +10,7 @@ const About = () => {
                             <div className="absolute inset-0 bg-primary rounded-3xl transform rotate-3 border-4 border-black translate-x-4 translate-y-4"></div>
                             <img
                                 src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop"
-                                alt="Elena Rossi"
+                                alt="Tanushree"
                                 className="w-full h-[600px] object-cover relative z-10 rounded-3xl border-4 border-black"
                             />
                         </div>

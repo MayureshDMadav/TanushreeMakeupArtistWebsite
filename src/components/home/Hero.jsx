@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
+import homePageImage from '../../../public/homePage.png';
 
 const Hero = () => {
     return (
-        <div className="relative h-screen w-full overflow-hidden">
+        <div className="relative h-screen w-full overflow-hidden pt-20">
             {/* Background Image */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop")' }}
+                style={{ backgroundImage: `url(${homePageImage})` }}
             >
                 <div className="absolute inset-0 bg-dark/30"></div>
             </div>

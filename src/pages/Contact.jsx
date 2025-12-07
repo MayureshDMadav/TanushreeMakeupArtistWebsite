@@ -36,15 +36,15 @@ const Contact = () => {
                             <div className="space-y-6 relative z-10">
                                 <div>
                                     <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Email</p>
-                                    <a href="mailto:hello@elenarossi.com" className="text-dark hover:text-accent font-body text-lg transition-colors">hello@elenarossi.com</a>
+                                    <a href="mailto:tanushreemadav@gmail.com" className="text-dark hover:text-accent font-body text-lg transition-colors">tanushreemadav@gmail.com</a>
                                 </div>
                                 <div>
                                     <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Phone</p>
-                                    <a href="tel:+1234567890" className="text-dark hover:text-accent font-body text-lg transition-colors">+1 (555) 123-4567</a>
+                                    <a href="tel:+919326272150" className="text-dark hover:text-accent font-body text-lg transition-colors">+91 9326272150</a>
                                 </div>
                                 <div>
                                     <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Studio</p>
-                                    <p className="text-dark font-body text-lg">123 Fashion Ave, Suite 400<br />New York, NY 10001</p>
+                                    <p className="text-dark font-body text-lg">Thane 400605</p>
                                 </div>
                                 <div>
                                     <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Social</p>
