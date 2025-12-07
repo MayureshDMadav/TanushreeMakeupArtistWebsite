@@ -4,19 +4,19 @@ const Services = () => {
     const services = [
         {
             title: 'Bridal / Groom Makeup',
-            price: 'Starting at ₹999',
+            price: 'Starting at ₹2499',
             description: 'Includes consultation, trial run, and wedding day application. Lashes included.',
             features: ['60-minute application', 'Premium skin prep', 'Long-wear application', 'Touch-up kit'],
         },
         {
             title: 'Special Event',
-            price: 'Starting at ₹499',
+            price: 'Starting at ₹999',
             description: 'Perfect for proms, galas, photoshoots, or any special occasion where you want to look your best.',
             features: ['30-minute application', 'Lashes included', 'Customized look', 'Setting spray'],
         },
         {
             title: 'Baby Shower Makeup',
-            price: 'Starting at ₹499',
+            price: 'Starting at ₹1999',
             description: 'Celebrate this special moment with a soft, radiant look that captures your natural glow. Perfect for the mom-to-be!',
             features: ['30-minute application', 'Premium skin prep', 'Long-wear application', 'Touch-up kit'],
         },
