@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import LazyImage from '../LazyImage';
 
 const FeaturedWork = () => {
     const works = [
@@ -30,7 +31,7 @@ const FeaturedWork = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {works.map((work) => (
                         <div key={work.id} className="group relative overflow-hidden cursor-pointer border-4 border-black rounded-2xl shadow-comic transition-all duration-300 hover:shadow-comic-hover hover:-translate-y-2">
-                            <img
+                            <LazyImage
                                 src={work.image}
                                 alt={work.category}
                                 className="w-full h-[400px] object-cover"

@@ -1,21 +1,19 @@
 import { Link } from 'react-router-dom';
+import Bayko from '../../../public/bayko.jpeg';
+import LazyImage from '../LazyImage';
 
 const Intro = () => {
     return (
-        <section className="py-20 md:py-32 bg-white/95 relative overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-10 right-10 text-6xl opacity-10 animate-bounce-slow">💄</div>
-            <div className="absolute bottom-10 left-10 text-6xl opacity-10 animate-bounce-slow" style={{ animationDelay: '1.5s' }}>✨</div>
-
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="flex flex-col md:flex-row items-center gap-12">
-                    <div className="w-full md:w-1/2">
+        <section className="py-20 bg-secondary/30 border-t-4 border-b-4 border-black shadow-comic">
+            <div className="container mx-auto px-6">
+                <div className="flex flex-col md:flex-row items-center gap-16">
+                    <div className="w-full md:w-1/2 animate-fade-in-up delay-100">
                         <div className="relative">
                             <div className="absolute inset-0 bg-primary rounded-3xl transform -rotate-3 border-4 border-black translate-x-4 translate-y-4"></div>
-                            <img
-                                src="https://images.unsplash.com/photo-1512413914633-b5043f4041ea?q=80&w=2053&auto=format&fit=crop"
+                            <LazyImage
+                                src={Bayko}
                                 alt="Makeup Artist"
-                                className="w-full h-[500px] object-cover rounded-3xl border-4 border-black shadow-comic relative z-10"
+                                className="w-full h-auto object-cover rounded-3xl border-4 border-black shadow-comic relative z-10"
                             />
                         </div>
                     </div>
@@ -26,7 +24,7 @@ const Intro = () => {
                         <p className="text-dark font-body font-medium text-lg mb-6 leading-relaxed bg-secondary p-4 rounded-2xl border-2 border-black">
                             With many years of experience in the beauty industry, I specialize in creating timeless, elegant looks that highlight your unique features. My philosophy is simple: makeup should empower you, not mask you. ✨
                         </p>
-                        <p className="text-dark font-body text-lg mb-8 leading-relaxed">
+                        <p className="text-dark font-body font-medium text-lg mb-6 leading-relaxed bg-secondary p-4 rounded-2xl border-2 border-black">
                             Whether it's your wedding day or a high-fashion editorial shoot, I bring passion, precision, and a calming presence to every appointment.
                         </p>
                         <Link

@@ -37,7 +37,7 @@ const Navbar = () => {
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link
                     to="/"
-                    className="text-3xl md:text-4xl font-display font-bold tracking-wider text-primary drop-shadow-[2px_2px_0_rgba(0,0,0,1)] hover:scale-110 hover:rotate-2 transition-all duration-200"
+                    className="text-3xl md:text-4xl font-display font-bold tracking-wider text-primary drop-shadow-[2px_2px_0_rgba(0,0,0,1)] hover:scale-110 hover:rotate-2 transition-all duration-200 text-sm"
                 >
                     TANUSHREE MAKEOVERS ✨
                 </Link>

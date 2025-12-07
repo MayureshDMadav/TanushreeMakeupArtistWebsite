@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import LazyImage from '../components/LazyImage';
 
 const Portfolio = () => {
     const [filter, setFilter] = useState('All');
@@ -47,7 +48,7 @@ const Portfolio = () => {
                     {filteredItems.map((item) => (
                         <div key={item.id} className="group relative overflow-hidden cursor-pointer border-4 border-black rounded-3xl shadow-comic hover:shadow-comic-hover hover:-translate-y-2 transition-all duration-300 bg-white p-2">
                             <div className="relative overflow-hidden rounded-2xl">
-                                <img
+                                <LazyImage
                                     src={item.image}
                                     alt={item.category}
                                     className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
