@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fredoka", sans-serif;
+  --font-body: "Quicksand", sans-serif;
+
+  --color-primary: #ff69b4;
+  /* Hot Pink */
+  --color-primary-light: #ffb7d5;
+  /* Bubblegum Pink */
+  --color-secondary: #fff0f5;
+  /* Lavender Blush */
+  --color-accent: #ff1493;
+  /* Deep Pink */
+  --color-dark: #4a4a4a;
+  /* Soft Black */
+  --color-light: #ffffff;
+
+  --shadow-comic: 4px 4px 0px 0px #000000;
+  --shadow-comic-hover: 6px 6px 0px 0px #000000;
+}
+
+@layer base {
+  body {
+    @apply font-body text-dark antialiased;
+    background-color: #fff0f5;
+    background-image: url('/makeup_pattern.png');
+    background-size: 400px 400px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    opacity: 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer utilities {
+  .animate-bounce-slow {
+    animation: bounce 3s infinite;
+  }
+
+  .animate-pop {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .animate-pop:hover {
+    transform: scale(1.05);
+  }
+
+  .border-comic {
+    @apply border-2 border-black rounded-xl shadow-comic;
+  }
+
+  .btn-comic {
+    @apply px-6 py-3 bg-primary text-white font-display font-bold uppercase tracking-wide border-2 border-black rounded-full shadow-comic transition-all duration-200 hover:translate-y-[-2px] hover:shadow-comic-hover active:translate-y-[0px] active:shadow-comic;
+  }
+
+  .bg-makeup-pattern {
+    background-image: url('/makeup_pattern.png');
+    background-size: 300px 300px;
+    background-repeat: repeat;
+  }
+
+  .bg-makeup-collection {
+    background-image: url('/makeup_collection.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(-5%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+}
