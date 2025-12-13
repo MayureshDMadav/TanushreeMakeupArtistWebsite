@@ -33,7 +33,7 @@ const Services = () => {
         },
         {
             question: 'What brands do you use?',
-            answer: 'I use a curated kit of high-end professional products including NARS, Charlotte Tilbury, MAC, and Dior.',
+            answer: 'I use a curated kit of high-end professional products including Forever52, Insight, Freshlook.',
         },
     ];
 

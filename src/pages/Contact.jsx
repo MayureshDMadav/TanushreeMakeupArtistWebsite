@@ -49,8 +49,8 @@ const Contact = () => {
                                 <div>
                                     <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Social</p>
                                     <div className="flex space-x-4">
-                                        <a href="#" className="text-dark hover:text-accent font-bold text-lg transition-colors">Instagram</a>
-                                        <a href="#" className="text-dark hover:text-accent font-bold text-lg transition-colors">TikTok</a>
+                                        <a href="https://www.instagram.com/tanushree_makeovers_20?igsh=aDNmMXphd2NmamFj" target="_blank" className="text-dark hover:text-accent font-bold text-lg transition-colors">Instagram</a>
+                                        {/* <a href="#" className="text-dark hover:text-accent font-bold text-lg transition-colors">TikTok</a> */}
                                     </div>
                                 </div>
                             </div>

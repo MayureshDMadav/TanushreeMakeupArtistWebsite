@@ -37,12 +37,12 @@ const Footer = () => {
                 <div>
                     <h4 className="text-xl font-display font-bold mb-4 text-dark">Connect</h4>
                     <div className="flex justify-center md:justify-start space-x-3">
-                        <a href="#" className="px-4 py-2 bg-primary text-white font-display font-bold text-sm rounded-full border-2 border-black shadow-comic hover:shadow-comic-hover hover:-translate-y-1 transition-all">
+                        <a href="https://www.instagram.com/tanushree_makeovers_20?igsh=aDNmMXphd2NmamFj" target="_blank" className="px-4 py-2 bg-primary text-white font-display font-bold text-sm rounded-full border-2 border-black shadow-comic hover:shadow-comic-hover hover:-translate-y-1 transition-all">
                             Instagram
                         </a>
-                        <a href="#" className="px-4 py-2 bg-accent text-white font-display font-bold text-sm rounded-full border-2 border-black shadow-comic hover:shadow-comic-hover hover:-translate-y-1 transition-all">
+                        {/* <a href="#" className="px-4 py-2 bg-accent text-white font-display font-bold text-sm rounded-full border-2 border-black shadow-comic hover:shadow-comic-hover hover:-translate-y-1 transition-all">
                             TikTok
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>
