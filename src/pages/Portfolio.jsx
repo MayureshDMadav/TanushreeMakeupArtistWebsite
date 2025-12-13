@@ -18,10 +18,16 @@ const Portfolio = () => {
         image: `/occasion/ocassion_${i + 1}.webp`,
     }));
 
-    const hairStyle = Array.from({ length: 5 }, (_, i) => ({
+    const hairStyle = Array.from({ length: 22 }, (_, i) => ({
         id: i + 1,
         category: 'Hairstyle',
-        image: `/hairstyle/hairstyle${i + 1}.webp`,
+        image: `/hairstyle/hairstyle_${i + 1}.webp`,
+    }));
+
+    const creaTive = Array.from({ length: 2 }, (_, i) => ({
+        id: i + 1,
+        category: 'Creative',
+        image: `/creative/creative_${i + 1}.webp`,
     }));
 
 
@@ -29,7 +35,7 @@ const Portfolio = () => {
         ...bridalItems,
         ...Occasion,
         ...hairStyle,
-        { id: 5, category: 'Creative', image: 'https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2070&auto=format&fit=crop' },
+        ...creaTive
     ];
 
     const filteredItems = filter === 'All'

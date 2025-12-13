@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 
 const Testimonials = () => {
-    // Placeholder for testimonials data, as it's used in the new code but not provided in the original or instruction.
-    // In a real application, this data would likely come from a prop, a state, or an external source.
-
-    const SHEET_ID = "1MXy3yhnKwkK1lwd5Aiponkz02rkBkPtbvcYmFxcfvxM";
-    const SHEET_NAME = "Form Responses 1";
+    const SHEET_ID = import.meta.env.VITE_SPREED_SHEET_ID;
+    const SHEET_NAME = import.meta.env.VITE_SPREED_SHEET_NAME;
     const [testimonials, setTestimonials] = useState([]);
 
     const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}`;
