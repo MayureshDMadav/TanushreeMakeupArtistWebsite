@@ -1,11 +1,10 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        date: '',
-        service: 'Bridal',
+        user_name: '',
+        user_email: '',
         message: '',
     });
 
@@ -15,8 +14,23 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert('Thank you for your message! I will get back to you shortly.');
-        setFormData({ name: '', email: '', date: '', service: 'Bridal', message: '' });
+        const serviceId = import.meta.env.VITE_PUBLIC_API_SERVICE_ID;
+        const templateId = import.meta.env.VITE_PUBLIC_API_TEMPLATE_ID;
+        const secretKey = import.meta.env.VITE_PUBLIC_API_PUBLIC_KEY;
+        emailjs
+            .sendForm(serviceId, templateId, form.current, {
+                publicKey: secretKey,
+            })
+            .then(
+                () => {
+                    alert('Thank you for your message! I will get back to you shortly.');
+                    setFormData({ user_name: '', user_email: '', message: '' });
+                },
+                (error) => {
+                    alert('Submitted Failed Please try again tommorrow');
+                },
+            );
+
     };
 
     return (
@@ -65,8 +79,8 @@ const Contact = () => {
                                     <label className="block text-sm font-bold uppercase tracking-widest text-dark mb-2">Name</label>
                                     <input
                                         type="text"
-                                        name="name"
-                                        value={formData.name}
+                                        name="user_name"
+                                        value={formData.user_name}
                                         onChange={handleChange}
                                         required
                                         className="w-full border-2 border-black rounded-xl p-3 focus:outline-none focus:shadow-comic transition-all font-body bg-secondary"
@@ -76,43 +90,14 @@ const Contact = () => {
                                     <label className="block text-sm font-bold uppercase tracking-widest text-dark mb-2">Email</label>
                                     <input
                                         type="email"
-                                        name="email"
-                                        value={formData.email}
+                                        name="user_email"
+                                        value={formData.user_email}
                                         onChange={handleChange}
                                         required
                                         className="w-full border-2 border-black rounded-xl p-3 focus:outline-none focus:shadow-comic transition-all font-body bg-secondary"
                                     />
                                 </div>
                             </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                <div>
-                                    <label className="block text-sm font-bold uppercase tracking-widest text-dark mb-2">Event Date</label>
-                                    <input
-                                        type="date"
-                                        name="date"
-                                        value={formData.date}
-                                        onChange={handleChange}
-                                        className="w-full border-2 border-black rounded-xl p-3 focus:outline-none focus:shadow-comic transition-all font-body bg-secondary"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-bold uppercase tracking-widest text-dark mb-2">Service Type</label>
-                                    <select
-                                        name="service"
-                                        value={formData.service}
-                                        onChange={handleChange}
-                                        className="w-full border-2 border-black rounded-xl p-3 focus:outline-none focus:shadow-comic transition-all font-body bg-secondary"
-                                    >
-                                        <option>Bridal</option>
-                                        <option>Editorial</option>
-                                        <option>Special Event</option>
-                                        <option>Lesson</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
-                            </div>
-
                             <div className="mb-8">
                                 <label className="block text-sm font-bold uppercase tracking-widest text-dark mb-2">Message</label>
                                 <textarea
