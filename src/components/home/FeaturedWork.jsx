@@ -11,7 +11,7 @@ const FeaturedWork = () => {
         {
             id: 2,
             image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070&auto=format&fit=crop',
-            category: 'Editorial',
+            category: 'Creative',
         },
         {
             id: 3,

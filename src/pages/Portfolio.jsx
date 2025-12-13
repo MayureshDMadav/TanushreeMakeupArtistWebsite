@@ -4,15 +4,32 @@ import LazyImage from '../components/LazyImage';
 const Portfolio = () => {
     const [filter, setFilter] = useState('All');
 
-    const categories = ['All', 'Bridal', 'Editorial', 'Occasion', 'Creative'];
+    const categories = ['All', 'Bridal', 'Hairstyle', 'Occasion', 'Creative'];
+
+    const bridalItems = Array.from({ length: 14 }, (_, i) => ({
+        id: i + 1,
+        category: 'Bridal',
+        image: `/bridal/bridal_${i + 1}.webp`,
+    }));
+
+    const Occasion = Array.from({ length: 8 }, (_, i) => ({
+        id: i + 1,
+        category: 'Occasion',
+        image: `/occasion/ocassion_${i + 1}.webp`,
+    }));
+
+    const hairStyle = Array.from({ length: 5 }, (_, i) => ({
+        id: i + 1,
+        category: 'Hairstyle',
+        image: `/hairstyle/hairstyle${i + 1}.webp`,
+    }));
+
 
     const portfolioItems = [
-        { id: 1, category: 'Bridal', image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2069&auto=format&fit=crop' },
-        { id: 2, category: 'Editorial', image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070&auto=format&fit=crop' },
-        { id: 3, category: 'Occasion', image: 'https://images.unsplash.com/photo-1457972729786-0411a3b2b626?q=80&w=2070&auto=format&fit=crop' },
-        { id: 4, category: 'Bridal', image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop' },
+        ...bridalItems,
+        ...Occasion,
+        ...hairStyle,
         { id: 5, category: 'Creative', image: 'https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2070&auto=format&fit=crop' },
-        { id: 6, category: 'Editorial', image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2070&auto=format&fit=crop' },
     ];
 
     const filteredItems = filter === 'All'

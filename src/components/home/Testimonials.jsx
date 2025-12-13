@@ -1,26 +1,34 @@
+import { useEffect, useState } from "react";
+
 const Testimonials = () => {
     // Placeholder for testimonials data, as it's used in the new code but not provided in the original or instruction.
     // In a real application, this data would likely come from a prop, a state, or an external source.
-    const testimonials = [
-        {
-            id: 1,
-            text: "Elena was absolutely amazing! She made me feel so beautiful on my wedding day. The makeup lasted all night and looked perfect in photos. I couldn't have asked for a better experience.",
-            name: "Sarah Jenkins",
-            role: "Bride"
-        },
-        {
-            id: 2,
-            text: "I've never felt so confident! Elena's artistic touch transformed my look for the photoshoot. She's a true professional with a fantastic eye for detail.",
-            name: "Jessica Lee",
-            role: "Model"
-        },
-        {
-            id: 3,
-            text: "Booking Elena for our corporate event was the best decision. Her team was efficient, friendly, and everyone looked stunning. Highly recommend!",
-            name: "Mark Davis",
-            role: "Event Organizer"
-        }
-    ];
+
+    const SHEET_ID = "1MXy3yhnKwkK1lwd5Aiponkz02rkBkPtbvcYmFxcfvxM";
+    const SHEET_NAME = "Form Responses 1";
+    const [testimonials, setTestimonials] = useState([]);
+
+    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}`;
+
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.text())
+            .then(text => {
+                const json = JSON.parse(text.substring(47).slice(0, -2));
+                const rows = json.table.rows.map(row =>
+                    row.c.map(cell => cell?.v)
+                );
+                const testimonials = rows.map((row, i) => ({
+                    id: i + 1,
+                    text: row[2],
+                    name: row[5],
+                    role: row[3]?.split(",")[0]
+                }));
+                setTestimonials(testimonials);
+            });
+    }, []);
+
+
 
     return (
         <section className="py-20 bg-white/95 relative overflow-hidden">
